@@ -32,12 +32,13 @@ namespace Hospital
             H.AgregarPacienteAuto(p2);
             //H.EliminarPacienteAuto(p1);
 
+            Console.WriteLine("\nCreemos la base de datos del hospital");
+
             bool i = false;
 
             while (!i)
             {
-                Console.WriteLine("\nCreemos la base de datos del hospital" +
-                                  "\n       Ingresa (0) para AGREGAR un medico"
+                Console.WriteLine("\n       Ingresa (0) para AGREGAR un medico"
                                 + "\n       Ingresa (1) para AGREGAR un paciente"
                                 + "\n       Ingresa (2) para ELIMINAR un medico"
                                 + "\n       Ingresa (3) para ELIMINAR un paciente"
@@ -52,6 +53,11 @@ namespace Hospital
                         case 0:
                             Console.WriteLine("Vamos a agregar un Medico");
                             H.AgregarMedicoManual();
+                            a = true;
+                            break;
+                        case 1:
+                            Console.WriteLine("Vamos a agregar un Paciente");
+                            H.AgregarPacienteManual();
                             a = true;
                             break;
                         case 4:

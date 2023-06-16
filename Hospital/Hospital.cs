@@ -100,9 +100,39 @@ namespace Hospital
 
         }
 
-        public void AgregarPacienteManual(int numPaciente1, string enfermedades1, int dni1, string nombre1,
-        int edad1, string sexo1, int telefono1, string email1, string vehiculo1, string direccion1)
+        public void AgregarPacienteManual()
         {
+
+            Console.Write("Número de paciente: ");
+            int numPaciente1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Enfermedades: ");
+            string enfermedades1 = Console.ReadLine();
+
+            Console.Write("DNI: ");
+            int dni1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Nombre: ");
+            string nombre1 = Console.ReadLine();
+
+            Console.Write("Edad: ");
+            int edad1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Sexo: ");
+            string sexo1 = Console.ReadLine();
+
+            Console.Write("Telefono: ");
+            int telefono1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Email: ");
+            string email1 = Console.ReadLine();
+
+            Console.Write("Vehiculo: ");
+            string vehiculo1 = Console.ReadLine();
+
+            Console.Write("Direccion: ");
+            string direccion1 = Console.ReadLine();
+
             Paciente paciente = new Paciente(numPaciente1, enfermedades1, dni1, nombre1, edad1,
                             sexo1, telefono1, email1, vehiculo1, direccion1);
             listaPacientes.Add(paciente);
