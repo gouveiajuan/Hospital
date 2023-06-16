@@ -14,7 +14,7 @@ namespace Hospital
         public List<Paciente> listaPacientes = new List<Paciente>();
 
         public void AgregarMedicoAuto(Medico m)
-        {   /*        
+        {   /*         
             Medico m1 = new Medico(123, "Urologo", 123456, "Jose", 45, "No binario", 623548965,
             "josejosejose@gmail.com", "Ferrari", "Arco del Triunfo, Barcelona");
             Medico m2 = new Medico(456, "Traumatologo", 488582, "Maria", 69, "Mujer", 645892542,
