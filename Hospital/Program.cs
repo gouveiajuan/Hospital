@@ -60,6 +60,13 @@ namespace Hospital
                             H.AgregarPacienteManual();
                             a = true;
                             break;
+                        case 2:
+                            Console.WriteLine("Vamos a eliminar un Medico"
+                                + "Ingresa el numero de colegiado ");
+                            int j = int.Parse(Console.ReadLine());
+                            H.EliminarMedicoManual(j);
+                            a = true;
+                            break;
                         case 4:
                             i = true;
                             break;
