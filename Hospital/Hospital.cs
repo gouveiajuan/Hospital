@@ -95,7 +95,6 @@ namespace Hospital
                 {
                     found = m;
                     Console.WriteLine("Se ha borrado el medico con número de colegiado: " + numColegiado2);
-                    //listaMedicos.Remove(m);
                     break;
                 }
             }
@@ -146,21 +145,18 @@ namespace Hospital
 
         public void EliminarPacienteManual(int numPaciente1)
         {
+            Paciente found = null;
             foreach (Paciente p in listaPacientes)
             {
                 if (p.NumPaciente == numPaciente1)
                 {
-                    Console.WriteLine("Se ha borrado el paciente con número de paciente: " + numPaciente1);
-                    listaPacientes.Remove(p);
-                    Console.ReadKey();
-                }
-                else
-                {
-                    Console.WriteLine("Ese número de paciente no existe");
-                    Console.ReadKey();
+                    found = p;
+                    Console.WriteLine("Se ha borrado el paciente con número: " + numPaciente1);
+                    break;
                 }
             }
-
+            if (found != null)
+                listaPacientes.Remove(found);
         }
     }
 }

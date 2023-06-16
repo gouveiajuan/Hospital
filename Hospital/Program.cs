@@ -67,6 +67,13 @@ namespace Hospital
                             H.EliminarMedicoManual(j);
                             a = true;
                             break;
+                        case 3:
+                            Console.WriteLine("Vamos a eliminar un Paciente"
+                                + "Ingresa el numero de paciente ");
+                            int k = int.Parse(Console.ReadLine());
+                            H.EliminarPacienteManual(k);
+                            a = true;
+                            break;
                         case 4:
                             i = true;
                             break;
