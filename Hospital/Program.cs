@@ -62,14 +62,14 @@ namespace Hospital
                             break;
                         case 2:
                             Console.WriteLine("Vamos a eliminar un Medico"
-                                + "Ingresa el numero de colegiado ");
+                                + "\nIngresa el numero de colegiado ");
                             int j = int.Parse(Console.ReadLine());
                             H.EliminarMedicoManual(j);
                             a = true;
                             break;
                         case 3:
                             Console.WriteLine("Vamos a eliminar un Paciente"
-                                + "Ingresa el numero de paciente ");
+                                + "\nIngresa el numero de paciente ");
                             int k = int.Parse(Console.ReadLine());
                             H.EliminarPacienteManual(k);
                             a = true;
