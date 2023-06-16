@@ -88,16 +88,20 @@ namespace Hospital
 
         public void EliminarMedicoManual(int numColegiado2)
         {
+            Medico found = null;
             foreach (Medico m in listaMedicos)
             {
                 if (m.NumColegiado == numColegiado2)
                 {
+                    found = m;
                     Console.WriteLine("Se ha borrado el medico con número de colegiado: " + numColegiado2);
-                    listaMedicos.Remove(m);
+                    //listaMedicos.Remove(m);
+                    break;
                 }
-                else Console.WriteLine("Ese número de colegiado no existe");
             }
 
+            if(found != null)
+                listaMedicos.Remove(found);
         }
 
         public void AgregarPacienteManual()
