@@ -136,8 +136,28 @@ namespace Hospital
             Console.Write("Direccion: ");
             string direccion1 = Console.ReadLine();
 
+            bool j = false;
+            Console.Write("Numero de Medico: ");
+            int medicoAsignado = int.Parse(Console.ReadLine());
+            while (!j)
+            {
+                foreach (Medico m in listaMedicos)
+                {
+                    if (m.NumColegiado == medicoAsignado)
+                    {
+                        j = true;
+                    }
+                }
+                if (!j)
+                {
+                    Console.Write("Ese numero de medico no existe \n" +
+                                    "Ingresa el numero nuevamente:  ");
+                    medicoAsignado = int.Parse(Console.ReadLine());
+                }          
+            }
+
             Paciente paciente = new Paciente(numPaciente1, enfermedades1, dni1, nombre1, edad1,
-                            sexo1, telefono1, email1, vehiculo1, direccion1);
+                            sexo1, telefono1, email1, vehiculo1, direccion1, medicoAsignado);
             listaPacientes.Add(paciente);
             Console.WriteLine("Se ha añadido correctamente");
             Console.ReadKey();
@@ -173,6 +193,24 @@ namespace Hospital
             foreach (Medico m in listaMedicos)
             {
                 Console.WriteLine(m.ToString());
+            }
+        }
+
+        public void MedicoPaciente()
+        {
+           ;
+            foreach (Medico m2 in listaMedicos)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(m2.ToString());
+                Console.ForegroundColor = ConsoleColor.Blue;
+                foreach (Paciente p2 in listaPacientes)
+                {
+                    if (m2.NumColegiado == p2.MedicoAsignado)
+                    {
+                        Console.WriteLine(p2.ToString());
+                    }
+                }
             }
         }
     }

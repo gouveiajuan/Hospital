@@ -13,30 +13,31 @@ namespace Hospital
         {
             Console.WriteLine("Vamos a crear una base de datos del Hospital de Barcelona");
             Menu();
-            /*
-            Medico m1 = new Medico(123, "Urologo", 123456, "Jose", 45, "No binario", 623548965,
-                "josejosejose@gmail.com", "Ferrari", "Arco del Triunfo, Barcelona");
-            Medico m2 = new Medico(456, "Traumatologo", 488582, "Maria", 69, "Mujer", 645892542,
-                "mariamaria@gmail.com", "Ferrari", "La Barceloneta, Barcelona");
 
-            H.AgregarMedicoAuto(m1);
-            H.AgregarMedicoAuto(m2);
-            //H.EliminarMedicoAuto(m1);
-
-            Paciente p1 = new Paciente(231, "Bronquitis", 58456, "Juan", 32, "Hombre", 64458911,
-                "juanjuan@gmail.com", "Citroen", "El Raval, Barcelona");
-            Paciente p2 = new Paciente(333, "Sida", 58456, "Alex", 17, "Hombre", 64465811,
-                "aleeeex@gmail.com", "N/A", "Zona Franca, Barcelona");
-
-            H.AgregarPacienteAuto(p1);
-            H.AgregarPacienteAuto(p2);
-            //H.EliminarPacienteAuto(p1);*/
         }
 
         public static void Menu()
         {
             Hospital h = new Hospital();
             Console.WriteLine("\nCreemos la base de datos del hospital");
+            
+            /*      Prueba para añadir medicos y pacientes al programa
+             
+            Medico m1 = new Medico(123, "Urologo", 123456, "Jose", 45, "No binario", 623548965,
+            "josejosejose@gmail.com", "Ferrari", "Arco del Triunfo, Barcelona");
+            Medico m2 = new Medico(456, "Traumatologo", 488582, "Maria", 69, "Mujer", 645892542,
+            "mariamaria@gmail.com", "Ferrari", "La Barceloneta, Barcelona");
+
+            Paciente p1 = new Paciente(231, "Bronquitis", 58456, "Juan", 32, "Hombre", 64458911,
+            "juanjuan@gmail.com", "Citroen", "El Raval, Barcelona", 123);
+            Paciente p2 = new Paciente(333, "Sida", 58456, "Alex", 17, "Hombre", 64465811,
+                "aleeeex@gmail.com", "N/A", "Zona Franca, Barcelona", 123);
+
+              h.AgregarPacienteAuto(p1);
+            h.AgregarPacienteAuto(p2);
+
+            h.AgregarMedicoAuto(m1);
+            h.AgregarMedicoAuto(m2); */
 
             bool i = false;
 
@@ -47,8 +48,9 @@ namespace Hospital
                                 + "\n       Ingresa (2) para ELIMINAR un medico"
                                 + "\n       Ingresa (3) para ELIMINAR un paciente"
                                 + "\n       Ingresa (4) para Mostrar lista de Medicos"
-                                + "\n       Ingresa (4) para Mostrar lista de Pacientes"
-                                + "\n       Ingresa (6) para salir\n");
+                                + "\n       Ingresa (5) para Mostrar lista de Pacientes"
+                                + "\n       Ingresa (6) para Mostrar lista de Pacientes que tiene un medico"
+                                + "\n       Ingresa (7) para salir\n");
 
                 bool a = false;
                 int opcion = int.Parse(Console.ReadLine());
@@ -89,6 +91,10 @@ namespace Hospital
                             a = true;
                             break;
                         case 6:
+                            h.MedicoPaciente();
+                            a = true;
+                            break;
+                        case 7:
                             i = true;
                             break;
                         default:
