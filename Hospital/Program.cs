@@ -13,7 +13,6 @@ namespace Hospital
         {
             Console.WriteLine("Vamos a crear una base de datos del Hospital de Barcelona");
             Menu();
-
         }
 
         public static void Menu()

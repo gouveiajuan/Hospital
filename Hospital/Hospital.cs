@@ -105,7 +105,6 @@ namespace Hospital
 
         public void AgregarPacienteManual()
         {
-
             Console.Write("Número de paciente: ");
             int numPaciente1 = int.Parse(Console.ReadLine());
 
@@ -155,7 +154,6 @@ namespace Hospital
                     medicoAsignado = int.Parse(Console.ReadLine());
                 }          
             }
-
             Paciente paciente = new Paciente(numPaciente1, enfermedades1, dni1, nombre1, edad1,
                             sexo1, telefono1, email1, vehiculo1, direccion1, medicoAsignado);
             listaPacientes.Add(paciente);

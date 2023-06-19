@@ -17,9 +17,6 @@ namespace Hospital
         private string vehiculo;
         private string direccion;
 
-        public Persona()
-        {
-        }
 
         public Persona(int dni, string nombre, int edad, string sexo, int telefono, string email, string vehiculo, string direccion)
         {
