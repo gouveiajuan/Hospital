@@ -198,7 +198,7 @@ namespace Hospital
 
         public void MedicoPaciente()
         {
-           ;
+           
             foreach (Medico m2 in listaMedicos)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -212,6 +212,7 @@ namespace Hospital
                     }
                 }
             }
+            Console.ResetColor();
         }
     }
 }

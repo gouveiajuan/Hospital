@@ -50,7 +50,8 @@ namespace Hospital
                                 + "\n       Ingresa (4) para Mostrar lista de Medicos"
                                 + "\n       Ingresa (5) para Mostrar lista de Pacientes"
                                 + "\n       Ingresa (6) para Mostrar lista de Pacientes que tiene un medico"
-                                + "\n       Ingresa (7) para salir\n");
+                                + "\n       Ingresa (7) para Mostrar todo lo que tiene el Hospital"
+                                + "\n       Ingresa (8) para salir\n");
 
                 bool a = false;
                 int opcion = int.Parse(Console.ReadLine());
@@ -95,6 +96,11 @@ namespace Hospital
                             a = true;
                             break;
                         case 7:
+                            h.MostrarMedicos();
+                            h.MostrarPacientes();
+                            a= true;
+                            break;
+                        case 8:
                             i = true;
                             break;
                         default:
