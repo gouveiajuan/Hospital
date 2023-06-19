@@ -21,5 +21,10 @@ namespace Hospital
             this.enfermedades = enfermedades;
         }
 
+        public override string ToString()
+        {
+            return base.ToString() + "Enfermedades: " + enfermedades +"|" + " Nº Paciente: " + numPaciente;
+        }
+
     }
 }

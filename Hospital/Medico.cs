@@ -9,7 +9,7 @@ namespace Hospital
     public class Medico : Persona
     {
         private int numColegiado;
-        public int NumColegiado { get {return numColegiado;} }
+        public int NumColegiado { get { return numColegiado; } }
         private string especialidad;
 
         public Medico(int numColegiado, string especialidad, int dni, string nombre,
@@ -18,6 +18,11 @@ namespace Hospital
         {
             this.numColegiado = numColegiado;
             this.especialidad = especialidad;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "Especialidad: " + especialidad + "|" + " Nº Colegiado: " + numColegiado;
         }
     }
 }

@@ -28,24 +28,24 @@ namespace Hospital
         public void EliminarMedicoAuto(Medico m)
         {
 
-                    Console.WriteLine("Se ha borrado el medico correctamente");
-                    listaMedicos.Remove(m);
-                    Console.ReadKey();
+            Console.WriteLine("Se ha borrado el medico correctamente");
+            listaMedicos.Remove(m);
+            Console.ReadKey();
 
         }
 
         public void AgregarPacienteAuto(Paciente p)
-        {   
+        {
             listaPacientes.Add(p);
             Console.WriteLine("El paciente se ha añadido correctamente");
             Console.ReadKey();
         }
 
         public void EliminarPacienteAuto(Paciente p)
-        {  
-                    Console.WriteLine("Se ha borrado el paciente con número: ");
-                    listaPacientes.Remove(p);
-                    Console.ReadKey();
+        {
+            Console.WriteLine("Se ha borrado el paciente con número: ");
+            listaPacientes.Remove(p);
+            Console.ReadKey();
 
         }
         public void AgregarMedicoManual()
@@ -99,7 +99,7 @@ namespace Hospital
                 }
             }
 
-            if(found != null)
+            if (found != null)
                 listaMedicos.Remove(found);
         }
 
@@ -157,6 +157,23 @@ namespace Hospital
             }
             if (found != null)
                 listaPacientes.Remove(found);
+        }
+        public void MostrarPacientes()
+        {
+            Console.WriteLine("Lista de pacientes:");
+            foreach (Paciente p in listaPacientes)
+            {
+                Console.WriteLine(p.ToString());
+            }
+        }
+
+        public void MostrarMedicos()
+        {
+            Console.WriteLine("Lista de Medicos: \n");
+            foreach (Medico m in listaMedicos)
+            {
+                Console.WriteLine(m.ToString());
+            }
         }
     }
 }

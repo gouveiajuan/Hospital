@@ -32,5 +32,11 @@ namespace Hospital
             this.vehiculo = vehiculo;
             this.direccion = direccion;
         }
+
+        public override string ToString()
+        {
+            return "DNI: " + dni + "|" + " Nombre: " + nombre + "|" + " Edad: " + edad + "|"
+                + " Sexo: " + sexo + "|" + " Telefono: " + telefono + "|" + " Email: " + email + "|";
+        }
     }
 }

@@ -11,9 +11,9 @@ namespace Hospital
         static void Main(string[] args)
 
         {
-            Hospital H = new Hospital();
             Console.WriteLine("Vamos a crear una base de datos del Hospital de Barcelona");
-
+            Menu();
+            /*
             Medico m1 = new Medico(123, "Urologo", 123456, "Jose", 45, "No binario", 623548965,
                 "josejosejose@gmail.com", "Ferrari", "Arco del Triunfo, Barcelona");
             Medico m2 = new Medico(456, "Traumatologo", 488582, "Maria", 69, "Mujer", 645892542,
@@ -30,8 +30,12 @@ namespace Hospital
 
             H.AgregarPacienteAuto(p1);
             H.AgregarPacienteAuto(p2);
-            //H.EliminarPacienteAuto(p1);
+            //H.EliminarPacienteAuto(p1);*/
+        }
 
+        public static void Menu()
+        {
+            Hospital h = new Hospital();
             Console.WriteLine("\nCreemos la base de datos del hospital");
 
             bool i = false;
@@ -42,7 +46,9 @@ namespace Hospital
                                 + "\n       Ingresa (1) para AGREGAR un paciente"
                                 + "\n       Ingresa (2) para ELIMINAR un medico"
                                 + "\n       Ingresa (3) para ELIMINAR un paciente"
-                                + "\n       Ingresa (4) para salir\n");
+                                + "\n       Ingresa (4) para Mostrar lista de Medicos"
+                                + "\n       Ingresa (4) para Mostrar lista de Pacientes"
+                                + "\n       Ingresa (6) para salir\n");
 
                 bool a = false;
                 int opcion = int.Parse(Console.ReadLine());
@@ -52,29 +58,37 @@ namespace Hospital
                     {
                         case 0:
                             Console.WriteLine("Vamos a agregar un Medico");
-                            H.AgregarMedicoManual();
+                            h.AgregarMedicoManual();
                             a = true;
                             break;
                         case 1:
                             Console.WriteLine("Vamos a agregar un Paciente");
-                            H.AgregarPacienteManual();
+                            h.AgregarPacienteManual();
                             a = true;
                             break;
                         case 2:
                             Console.WriteLine("Vamos a eliminar un Medico"
                                 + "\nIngresa el numero de colegiado ");
                             int j = int.Parse(Console.ReadLine());
-                            H.EliminarMedicoManual(j);
+                            h.EliminarMedicoManual(j);
                             a = true;
                             break;
                         case 3:
                             Console.WriteLine("Vamos a eliminar un Paciente"
                                 + "\nIngresa el numero de paciente ");
                             int k = int.Parse(Console.ReadLine());
-                            H.EliminarPacienteManual(k);
+                            h.EliminarPacienteManual(k);
                             a = true;
                             break;
                         case 4:
+                            h.MostrarMedicos();
+                            a = true;
+                            break;
+                        case 5:
+                            h.MostrarPacientes();
+                            a = true;
+                            break;
+                        case 6:
                             i = true;
                             break;
                         default:
